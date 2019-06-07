@@ -30,7 +30,7 @@ export class EditPatientComponent implements OnInit {
       name: this.editarForm.value.name,
       document: this.editarForm.value.document,
       city: this.editarForm.value.city,
-      syntom: this.editarForm.value.syntom,
+      symptom: this.editarForm.value.syntom,
       url: this.editarForm.value.url
     }
     
