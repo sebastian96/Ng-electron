@@ -1,0 +1,70 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="nameForm">
+    <form [formGroup]="nameForm">
+      <ng-template matStepLabel>Ingrese su nombre</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Nombre y apellido" formControlName="name">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="documentForm">
+    <form [formGroup]="documentForm">
+      <ng-template matStepLabel>Ingrese su documento</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Documento" formControlName="document">
+      </mat-form-field>
+      <div>
+        <button style="margin-right: 15px;" mat-raised-button matStepperPrevious color="warn">Volver</button>
+        <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="cityForm">
+    <form [formGroup]="cityForm">
+      <ng-template matStepLabel>Ingrese su ciudad</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Ciudad" formControlName="city">
+      </mat-form-field>
+      <div>
+          <button style="margin-right: 15px;" mat-raised-button matStepperPrevious color="warn">Volver</button>
+          <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="syntomForm">
+    <form [formGroup]="syntomForm">
+      <ng-template matStepLabel>Ingrese sus síntomas</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Síntomas" formControlName="syntom" required>
+      </mat-form-field>
+      <div>
+          <button style="margin-right: 15px;" mat-raised-button matStepperPrevious color="warn">Volver</button>
+          <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="urlForm">
+    <form [formGroup]="urlForm">
+      <ng-template matStepLabel>Ingrese la url</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Url" formControlName="url">
+      </mat-form-field>
+      <div>
+          <button style="margin-right: 15px;" mat-raised-button matStepperPrevious color="warn">Volver</button>
+          <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Finalizar</ng-template>
+    Has terminado
+    <div>
+      <button style="margin-right: 15px;" mat-raised-button matStepperPrevious color="warn">Volver</button>
+      <button style="margin-right: 15px;" mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
+      <button mat-raised-button color="primary" (click)="dataForm()">Enviar</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

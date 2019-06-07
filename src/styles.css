@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #303030;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background: #494949;
+    color: #fff;
+    padding: 0px 80px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: 518px;
+    background: #494949;
+}
+
+.white {
+    color: #fff;
+}
+
+.container .image {
+    height: 250px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.example-container mat-form-field{
+    display: block;
+}
+
+.cdk-overlay-pane {
+    max-width: none;
+    width: 50%;
+}

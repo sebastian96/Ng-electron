@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Editar paciente</h2>
+<mat-dialog-content [formGroup]="editarForm">
+  <div class="example-container">
+    <ng-template matStepLabel>Nombre</ng-template>
+    <mat-form-field>
+      <input matInput value="{{ patientData.name }}" formControlName="name">
+    </mat-form-field>
+    <ng-template matStepLabel>Documento</ng-template>
+    <mat-form-field>
+      <input matInput value="{{ patientData.document }}" placeholder="Documento" formControlName="document">
+    </mat-form-field>
+    <ng-template matStepLabel>Ciudad</ng-template>
+    <mat-form-field>
+      <input matInput value="{{ patientData.city }}" placeholder="Ciudad" formControlName="city">
+    </mat-form-field>
+    <ng-template matStepLabel>Síntomas</ng-template>
+    <mat-form-field>
+      <textarea matInput value="{{ patientData.symptom }}" placeholder="Síntomas" formControlName="syntom" rows="3"
+      ></textarea>
+    </mat-form-field>
+    <ng-template matStepLabel>Url</ng-template>
+    <mat-form-field>
+      <input matInput value="{{ patientData.url }}" placeholder="url" formControlName="url">
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="closeDialog()">Cerrar</button>
+  <button class="mat-raised-button mat-primary" (click)="updatePatient()">Guardar</button>
+</mat-dialog-actions>
